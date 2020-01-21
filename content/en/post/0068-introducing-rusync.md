@@ -110,7 +110,7 @@ let progress = ProgressMessage::Syncing {
 progress_sender.send(progress);
 ```
 
-All that's left to do is for the ProgressWorker to process ProgressMessage in a nice `switch case`:
+All that's left to do is for the ProgressWorker to process ProgressMessage in a nice `match` clause:
 
 ```rust
 for progress in self.input.iter() {
